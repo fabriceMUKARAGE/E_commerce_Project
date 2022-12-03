@@ -23,10 +23,10 @@ if(!isset($_SESSION["uid"])){
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">	
 			<div class="navbar-header">
-				<a href="#" class="navbar-brand">Ecommerce</a>
+				<a href="#" class="navbar-brand">Flier Services</a>
 			</div>
 			<ul class="nav navbar-nav">
-				<li><a href="home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+				<li><a href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
 				<li><a href="about.php"><span class="glyphicon glyphicon-book"></span> About us</a></li>
 				<li><a href="index2.php"><span class="glyphicon glyphicon-list-alt"></span> Services</a></li>
 			</ul>

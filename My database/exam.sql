@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 05:22 PM
+-- Generation Time: Dec 02, 2022 at 05:45 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -40,8 +40,6 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `email`, `password`, `is_active`) VALUES
-(5, 'Bruno', 'brunoadmin@gmail.com', '$2y$10$qZ0OoyX8bhAVxDFM/fx8leZSZwlyq15c1C/KTnaqDLSx6eCDJ0VpC', '0'),
-(8, 'Harry Den', 'harryden@gmail.com', '$2y$10$YKSDtra7v2wH6ORYfry8Ue9t49pk1AvQvdJGuq4lDvFLEcx.kP6Mq', '0'),
 (9, 'fabrice Mukarage', 'fabrice.mukarage@gmail.com', '$2y$10$5JMSkF21fFQ.wik/6yHddeLLSJe3pD0dqctxEUFpeH/SZXT0p9NnO', '0');
 
 -- --------------------------------------------------------
@@ -63,7 +61,7 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `p_id`, `ip_add`, `user_id`, `qty`) VALUES
-(29, 2, '::1', -1, 1);
+(46, 2, '::1', 7, 1);
 
 -- --------------------------------------------------------
 
@@ -163,7 +161,29 @@ INSERT INTO `services` (`service_id`, `service_cat`, `service_title`, `service_p
 (30, 24, 'fliers for sports', 1, 'sports', 'sport.jpg', 'sports'),
 (31, 3, 'Marketing fliers', 1, 'marketing', 'adverting.jpg', 'marketing'),
 (32, 5, 'ads fliers', 2, 'Ads', 'ad.jpg', 'ads'),
-(33, 18, 'flier for party', 1, 'party fliers', 'party.jpg', 'party');
+(33, 18, 'flier for party', 1, 'party fliers', 'party.jpg', 'party'),
+(34, 2, 'second business sample', 1, 'business', 'post.JPG', 'business'),
+(35, 2, 'Another business sample', 2, 'business', 'Concert.JPG', 'business');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `themessage`
+--
+
+CREATE TABLE `themessage` (
+  `id` int(15) NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `phone` int(15) NOT NULL,
+  `message` varchar(191) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `themessage`
+--
+
+INSERT INTO `themessage` (`id`, `name`, `phone`, `message`) VALUES
+(4, 'Fabrice', 787878787, 'flier which is medium, containing the image, location which is kigali tower, building 145. at 8:00pm');
 
 -- --------------------------------------------------------
 
@@ -192,7 +212,11 @@ INSERT INTO `user_info` (`user_id`, `first_name`, `last_name`, `email`, `passwor
 (3, 'Demo', 'Name', 'demo@gmail.com', 'password', '9876543210', 'demo ad1', 'ademo ad2'),
 (5, 'Steeve', 'Rogers', 'steeve1@gmail.com', '305e4f55ce823e111a46a9d500bcb86c', '9876547770', '573  Pinewood Avenue', 'MN'),
 (6, 'Melissa', 'Gilbert', 'gilbert@gmail.com', '305e4f55ce823e111a46a9d500bcb86c', '7845554582', '1711  McKinley Avenue', 'MA'),
-(7, 'Fabrice', 'Mukarage', 'fabrice.mukarage@gmail.com', 'ccb507236fa18a4ceb3e8b19ed06489b', '0783932356', 'Muyira, Nyanza', 'Kigali');
+(7, 'Fabrice', 'Mukarage', 'fabrice.mukarage@gmail.com', 'ccb507236fa18a4ceb3e8b19ed06489b', '0783932356', 'Muyira, Nyanza', 'Kigali'),
+(8, 'asdf', 'wer', 'asdf.asdf@gmail.com', '177cf5273ff83ce7ba6fcae475a3b856', '0787478777', 'asdf', 'asdf'),
+(9, 'eeee', 'ojkjd', 'fabriceee.mukarage@gmail.com', 'ccb507236fa18a4ceb3e8b19ed06489b', '0787877774', 'asdf', 'asdf'),
+(10, 'eeee', 'ojkjd', 'fabriceeee.mukarage@gmail.com', 'a47e3dd0411c60691bd9de5aa8366b9e', '0787877774', 'asdf', 'asdf'),
+(11, 'eee', 'asdfa', 'fadshess.d@gmail.com', 'ccb507236fa18a4ceb3e8b19ed06489b', '0787778747', 'asdf', 'asdf');
 
 --
 -- Indexes for dumped tables
@@ -230,6 +254,12 @@ ALTER TABLE `services`
   ADD PRIMARY KEY (`service_id`);
 
 --
+-- Indexes for table `themessage`
+--
+ALTER TABLE `themessage`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user_info`
 --
 ALTER TABLE `user_info`
@@ -249,7 +279,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -267,13 +297,19 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `service_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `service_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
+-- AUTO_INCREMENT for table `themessage`
+--
+ALTER TABLE `themessage`
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

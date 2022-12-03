@@ -55,14 +55,15 @@
 			 and then the flier will be sent to you as soon as possible. Different fliers are offered such as fliers for:
             </p>
             <div class="skills">
-                <span>business</span>
-                <span>Marketing</span>
-                <span>Advertising</span>
-				<span>Ads<br></span>
-				<span>Celebrations</span>
+                <span>business/</span>
+                <span>Marketing/</span>
+                <span>Advertising/</span>
+				<span>Ads/<br></span>
+				<span>Celebrations/</span>
 				<span>Events</span>
 
             </div>
+		<p class="text"><br>For more information feel free to contact us at <strong>fabrice.mukarage@gmail.com</strong> <br> or call us at <strong>+250787474784</strong></p>
         </div>
     </div>
 </body>

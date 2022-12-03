@@ -51,13 +51,13 @@
         	<div class="row">
         		<div class="col-12">
         			<div class="form-group">
-		        		<label>Category Name</label>
-		        		<input type="text" name="cat_title" class="form-control" placeholder="Enter Brand Name">
+		        		<label>sample type</label>
+		        		<input type="text" name="cat_title" class="form-control" placeholder="Enter sample type">
 		        	</div>
         		</div>
         		<input type="hidden" name="add_category" value="1">
         		<div class="col-12">
-        			<button type="button" class="btn btn-primary add-category">Add Category</button>
+        			<button type="button" class="btn btn-primary add-category">Add sample name</button>
         		</div>
         	</div>
         	
